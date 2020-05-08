@@ -4,8 +4,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "postbuild": "next-on-netlify"
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@emotion/core": "^10.0.27",
@@ -14,7 +15,6 @@
     "@stripe/stripe-js": "^1.0.0-beta.5",
     "axios": "^0.19.2",
     "next": "latest",
-    "next-on-netlify": "^1.2.0",
     "react": "^16.7.0",
     "react-confetti": "^5.0.1",
     "react-dom": "^16.7.0",
